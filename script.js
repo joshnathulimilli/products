@@ -1,6 +1,11 @@
 function getStoredUsers(){
-    let stored = localStorage.getItem("registeredUsers");
-    return stored ? JSON.parse(stored) : {};
+    try {
+        let stored = localStorage.getItem("registeredUsers");
+        return stored ? JSON.parse(stored) : {};
+    } catch(error) {
+        localStorage.removeItem("registeredUsers");
+        return {};
+    }
 }
 
 function saveStoredUsers(users){
@@ -70,6 +75,22 @@ function checkAuth(){
     }
 }
 
+function updateAuthLink(){
+    let logoutLink = document.getElementById("logoutLink");
+
+    if(!logoutLink){
+        return;
+    }
+
+    if(localStorage.getItem("loggedInUser")){
+        logoutLink.textContent = "Logout";
+        logoutLink.href = "index.html";
+    } else {
+        logoutLink.textContent = "Login";
+        logoutLink.href = "index.html";
+    }
+}
+
 function togglePassword(){
     let password = document.getElementById("password");
     let toggle = document.getElementById("togglePassword");
@@ -107,6 +128,7 @@ function addToCart(event){
 
 document.addEventListener("DOMContentLoaded", function(){
     checkAuth();
+    updateAuthLink();
 
     let loginForm = document.getElementById("loginForm");
     let registerForm = document.getElementById("registerForm");
