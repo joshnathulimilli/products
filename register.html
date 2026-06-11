@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Shopsy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <section class="login-box" aria-labelledby="registerTitle">
+        <h1>Shopsy</h1>
+        <h2 id="registerTitle">Create Account</h2>
+
+        <form id="registerForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+
+            <label for="registerEmail">Email Address</label>
+            <input type="email" id="registerEmail" placeholder="Email Address" required>
+
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+            <button type="submit">Create Account</button>
+
+            <p>
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

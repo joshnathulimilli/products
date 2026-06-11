@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shopsy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-auth="required">
+<header>
+    <nav class="navbar" aria-label="Main navigation">
+        <h2>Shopsy</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" id="logoutLink">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-page" aria-labelledby="contactTitle">
+        <div class="contact-container">
+            <h1 id="contactTitle">Contact Us</h1>
+
+            <div class="contact-content">
+                <section class="contact-form" aria-labelledby="messageTitle">
+                    <h2 id="messageTitle">Send us a Message</h2>
+                    <form id="contactForm">
+                        <label for="contactName">Your Name</label>
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+
+                        <label for="contactEmail">Your Email</label>
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" placeholder="Subject" required>
+
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" placeholder="Your Message" rows="6" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+
+                <section class="contact-info" aria-labelledby="infoTitle">
+                    <h2 id="infoTitle">Contact Information</h2>
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>support@shopsy.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <p>+91 1234567890</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Address</h3>
+                        <p>123 Shopping Street<br>Commerce City, CC 12345<br>India</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Shopsy. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
